@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="manipula">
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ipsa quo nam commodi dolores vero nisi eius, modi iure, possimus eaque rem consequuntur non omnis id quas et minus culpa.</p>
+
+        <p class="paragrafo">
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ea necessitatibus, id eaque consequuntur voluptate deleniti! Quod rerum adipisci exercitationem excepturi inventore suscipit illo veritatis culpa! Quae libero esse dicta vel.
+
+        </p>
+    </div>
+<br>
+<hr>
+<h2 class="chamada"> Clique nos botões para executar alguma função</h2>
+
+
+
+
+<div id="botoes">
+<!-- botão 01 - atualizar a página -->
+    <input type="button" name="" id="" value="atualizar" onclick="window.location.reload()">
+
+    
+<!-- botão 02 - alterar o tamanho da fornte -->
+    <input type="button" name="" id="" value="botão-02" onclick="mudaTamanhoFont()">
+
+
+    <!-- botão 3 - alterar a cor do parágrafo -->
+    <input type="button" name="" id="" value="botão-03" onclick= "mudaCorParagrafo()">
+
+
+    
+    <input type="button" name="" id="" value="botão-04" onclick="MudaCorBackground()">
+
+
+   
+    <input type="button" name="" id="" value="botão-05" onclick="MudaLetra()">
+    
+   
+    <input type="button" name="" id="" value="botão-06" onclick="MudaLetraNegrito()">
+
+   
+    <input type="button" name="" id="botoes" value="botão-07" onclick="Mudarborda()" >
+
+
+
+   
+    <input type="button" name="" id="" value="botão-08" onclick="removeBorda()">
+
+   
+    <input type="button" name="" id="" value="botão-09" onclick="escondendoDiv()">
+   
+    <input type="button" name="" id="" value="botão-10" onclick="mostrarDiv()">
+
+
+   
+    <input type="button" name="" id="" value="botão-11" onclick="textoAlterar()">
+   
+    <input type="button" name="" id="" value="botão-12" onclick="MudarCorFundoDoParagrafo()">
+   
+    <input type="button" name="" id="" value="botão-13" onclick="MudarCorBotao()">
+   
+    <input type="button" name="" id="" value="botão-14" onclick="MudarCorTodosBotoes()">
+
+   
+    <input type="button" name="" id="" value="botão-15" onclick="QuantidadeDeBotoes()">
+   
+    <input type="button" name="" id="" value="botão-16" onclick="SubstituirParagrafo()">
+   
+    <input type="button" name="" id="" value="botão-17" onclick="MudarCorDoBlackground()">
+   
+    <input type="button" name="" id="" value="botão-18" onclick="alunoSenai()">
+
+</div>
+
+<br>
+<br>
+
+<img src="XUXA IMG.jpg"  id= "image" alt="">
+
+<script>
+    // função para trocar a fone do parágrafo
+
+    function mudaTamanhoFont(){
+        document.getElementById("manipula").style.fontSize = "36px";
+    }
+
+    function mudaCorParagrafo(){
+        document.getElementById("manipula").style.color = "blue";
+        
+    }
+// botão para alterar a cor do background da div - 04
+    function MudaCorBackground(){
+        document.getElementById("manipula").style.backgroundColor = "yellow";
+        
+    }
+
+    // botão para alterar a font da div para itálico- 05
+    function MudaLetra(){
+        document.getElementById("manipula").style.fontStyle = "italic";
+        
+    }
+// botão para alterar a font da div para negrito- 06
+    function MudaLetraNegrito(){
+      document.getElementById("manipula").style.fontWeight = "bold";
+        
+    }
+
+
+// botão para alterar a borda da div para negrito- 07
+    function Mudarborda() {
+           document.getElementById("manipula").style.border = "10px solid black";
+        }
+
+// botão para alterar remover a borda da div - 08
+        function removeBorda() {
+        document.getElementById("manipula").style.border = "none";
+    }
+
+
+
+
+    // botão para alterar esconder a div - 09
+ 
+    function escondendoDiv() {
+            document.getElementById("manipula").style.display = "none"; 
+        }
+
+
+// botão para mostrar a div - 10
+
+        function mostrarDiv() {
+        document.getElementById("manipula").style.display = "block";
+        }
+
+
+
+
+// botão para alterar o texto no H2 - 11
+        function textoAlterar() {
+            var titulo = document.querySelector(".chamada");
+            titulo.textContent = "Não mexer nesse botão"; 
+        }
+
+// botão para alterar cor do parágrafo - 12
+
+        function MudarCorFundoDoParagrafo() {
+            var paragrafo = document.querySelector(".paragrafo");
+            paragrafo.style.backgroundColor = "blue"; 
+        }
+
+// botão para alterar cor do botão - 13
+        function MudarCorBotao() {
+    var botao13 = document.getElementById("botoes").children[12]; // Selecionar o botão 13 pelo índice (começando do 0)
+    botao13.style.backgroundColor = "red"; // Alterar a cor do botão para vermelho (pode ser qualquer cor desejada)
+}
+
+
+
+// botao para alterar todas as cores dos botões -14
+function MudarCorTodosBotoes() {
+    var botoes = document.getElementById("botoes").getElementsByTagName("input"); // Selecionar todos os botões
+
+    for (var i = 0; i < botoes.length; i++) {
+        botoes[i].style.backgroundColor = "red"; // Alterar a cor de fundo de todos os botões para vermelho
+    }
+}
+
+// botao para alterar todas as cores dos botões -15
+
+function QuantidadeDeBotoes(){
+   let numInputs = document.getElementsByTagName("input")
+
+    document.getElementById("manipula").innerHTML = numInputs.length 
+}
+
+
+
+// botao para alterar o segundo parágrafo -16
+
+
+function SubstituirParagrafo(){
+    document.getElementsByClassName("paragrafo")[0].innerHTML = "***"
+}
+
+
+
+// mudar cor de fundo -17
+function MudarCorDoBlackground(){
+    document.getElementsByTagName("body")[0].style.backgroundColor = "black"
+}
+
+//  É oque acontece com o aluno do senai -18
+function alunoSenai(){
+   let img = document.getElementById("image")
+   img.setAttribute('src', 'senai-logo-1-768x197-2419939305.png')
+}
+
+</script>
+
+
+</body>
+</html>
